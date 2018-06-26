@@ -199,7 +199,7 @@ footer a:hover {
 .bejelentkezes,
 .regisztracio {
   min-height: 100vh;
-  background-image: url('img/login-bg.jpg');
+  background-image: url('../img/login-bg.jpg');
   background-size: cover;
   padding-top: 8%;
   padding-bottom: 8%;
@@ -292,7 +292,7 @@ footer a:hover {
       rgba(43, 45, 66, 0.4),
       rgba(43, 45, 66, 0.65)
     ),
-    url('img/error-page.jpeg');
+    url('../img/error-page.jpeg');
   background-repeat: no-repeat;
   min-height: 100vh;
   background-size: cover;
