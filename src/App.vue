@@ -1,8 +1,10 @@
 <template>
     <div>
-        <Navigation></Navigation>
+        <Navigation :itemCollection="navItems" @pageChange="OnPageChange"></Navigation>
 
-        <index></index>
+        <keep-alive>
+            <component :is="currentPage"></component>
+        </keep-alive>
 
         <Footer></Footer>
     </div>
@@ -11,17 +13,36 @@
 import Navigation from './components/Navigation.vue';
 import Footer from './components/Footer.vue';
 import index from './pages/index.vue';
+import blog from './pages/blog.vue';
 
 export default {
+    name: 'App',
     components: {
         Navigation,
         Footer,
-        index
+        index,
+        blog
     },
     data: function() {
         return {
-            message:'kldjasfkladjjadflkjadflkjaf'
+            currentPage: 'blog',
+            navItems: []
         };
+    },
+    created() {
+        this.navItems.push({
+            name: 'Főoldal',
+            id: 'index'
+        });
+        this.navItems.push({
+            name: 'Blog',
+            id: 'blog'
+        });
+    },
+    methods: {
+        OnPageChange(newPage) {
+            this.currentPage = newPage;
+        }
     }
 };
 </script>
