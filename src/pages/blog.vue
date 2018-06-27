@@ -1,13 +1,17 @@
 <template>
     <div>
-        <div class="jumbotron jumbotron-fluid mb-0">
-            <div class="container">
-                <h1 class="">Mennyit keresnék, ha...?</h1>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum fugiat sequi, placeat
-                    dolor aliquid porro a quisquam ut, accusantium quasi assumenda maiores ipsum vel.</p>
-                <a class="btn btn-green btn-lg mt-3" href="#" role="button">Tovább a kérdőívekre!</a>
-            </div>
-        </div>
+
+        <Jumbitron buttonURL="#" buttonText="Tovább a kérdőívekre!">
+            <template slot="title">
+                Mennyit keresnék ha...?
+            </template>
+            <template slot="lead">
+                Aroma cinnamon plunger pot blue mountain aftertaste, carajillo, milk to go
+                french press dark shop. Shop, percolator est black froth latte americano.
+                Rich, mug, ristretto spoon fair trade filter, rich half and half beans saucer
+                variety caffeine. A sit con panna redeye, as aromatic plunger pot as robust cream.
+            </template>
+        </Jumbitron>
 
         <div class="container">
 
@@ -230,5 +234,8 @@
 </template>
 
 <script>
-export default {};
+import Jumbitron from "../components/Jumbitron.vue";
+export default {
+    components: {Jumbitron}
+};
 </script>

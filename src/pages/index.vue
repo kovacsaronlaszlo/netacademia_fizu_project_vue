@@ -1,25 +1,27 @@
 <template>
 
     <div>
-        <div class="jumbotron jumbotron-fluid mb-0">
-            <div class="container">
-                <h1 class="">Mennyit keresnék, ha...?</h1>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum fugiat sequi, placeat dolor
-                    aliquid porro a quisquam ut,
-                    accusantium quasi assumenda maiores ipsum vel.</p>
-                <a class="btn btn-green btn-lg mt-3" href="#" role="button">Tovább a kérdőívekre!</a>
-            </div>
-        </div>
+
+        <Jumbitron buttonURL="#" buttonText="Tovább a kérdőívekre!">
+            <template slot="title">
+                Mennyit keresnék ha...?
+            </template>
+            <template slot="lead">
+                Aroma cinnamon plunger pot blue mountain aftertaste, carajillo, milk to go
+                french press dark shop. Shop, percolator est black froth latte americano.
+                Rich, mug, ristretto spoon fair trade filter, rich half and half beans saucer
+                variety caffeine. A sit con panna redeye, as aromatic plunger pot as robust cream.
+            </template>
+        </Jumbitron>
 
         <main>
             <div class="container py-5">
                 <div class="row py-5">
                     <div class="col-12 col-md-6 col-lg-4 mb-5 mb-md-0 text-center px-4">
                         <img src="../img/graf1.png" alt="" class="img-fluid mb-4" width="150">
-                        <p>A diplomások
-                            <span class="font-lg">
-            <strong>268%</strong>
-          </span>-kal keresnek többet a diplomával nem rendelkezőknél!</p>
+                        <p>
+                            A diplomások<span class="font-lg"><strong>268%</strong></span>-kal keresnek többet a diplomával nem rendelkezőknél!
+                        </p>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4 my-5 my-md-0 text-center px-4">
                         <img src="../img/graf2.png" alt="" class="img-fluid mb-4" width="150">
@@ -58,12 +60,14 @@
                         </div>
                         <div class="col-12 col-md-7 my-auto">
                             <h3 class="mb-3">Mire jó a fizu.hu?</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam alias modi repellendus eos
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam alias modi repellendus
+                                eos
                                 accusantium officiis
                                 dicta quam minus qui dignissimos.</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos officiis, est quam
                                 ducimus possimus animi
-                                autem. Ullam ducimus, veniam aut et, quisquam fugit animi ea repellendus voluptatum totam
+                                autem. Ullam ducimus, veniam aut et, quisquam fugit animi ea repellendus voluptatum
+                                totam
                                 sequi quod excepturi.
                                 Aperiam nostrum officiis soluta!
                             </p>
@@ -72,18 +76,7 @@
                 </div>
             </section>
 
-            <section class="container py-5">
-                <div class="row">
-                    <div class="col-12 col-md-8 mx-auto">
-                        <h3 class="mb-4">Videó beágyazása a weboldalba</h3>
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item"
-                                    src="https://www.youtube.com/embed/FiCtolh3hX4?list=PL4cUxeGkcC9g_69kOfXICzT_hZ79_td99"
-                                    allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <YoutubeVideoEmbed title="Videó beágyazása a weboldalba" videoSource="https://www.youtube.com/embed/FiCtolh3hX4?list=PL4cUxeGkcC9g_69kOfXICzT_hZ79_td99"></YoutubeVideoEmbed>
 
             <section class="bg-green py-5">
                 <div class="container">
@@ -122,11 +115,13 @@
                                 </blockquote>
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                           data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                           data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
@@ -139,5 +134,10 @@
 
 </template>
 <script>
-    export default {};
+import Jumbitron from "../components/Jumbitron.vue";
+import YoutubeVideoEmbed from "../components/YoutubeVideoEmbed.vue";
+
+export default {
+    components: {YoutubeVideoEmbed, Jumbitron}
+};
 </script>
